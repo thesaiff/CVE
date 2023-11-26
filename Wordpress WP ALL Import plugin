@@ -1,0 +1,9 @@
+Stored Cross-Site Scripting (XSS) is a security flaw where an attacker inserts harmful code, often in the form of script tags or HTML elements, into web applications. 
+This malicious code is then stored on the server and executed whenever other users interact with the compromised content, potentially leading to unauthorized actions.
+Here stored cross-site scripting (XSS) was identified in the comment field associated with the wordpress posts created using WP All Import plugin.
+
+1. Install WordPress 6.4.1 and add WP All Import 3.7.3 plugin
+2. Create a New Import for WordPress Posts. Navigate to All Import > New Import > Select Import file > Confirm & Run import
+3. Navigate to Posts section from the left side of the dashboard menu > All Posts > click on the post which we have created.
+4. Scroll down to the comment section, insert the stored XSS payload and proceed to publish the comment.
+5. Refresh the page and observe XSS is triggered.
